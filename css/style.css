@@ -84,13 +84,14 @@ nav a {
 
 .welcome-block {
     grid-column: 1 / 4;
-    background-image: url('../images/background.png');
     background-size: cover;
     background-position: center;
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #d39fca 0%, #8077a5c0 100%);
     height: 250px;
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 0 50px rgb(255, 255, 255,0.1);
+    box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1);
 }
 
 .logo-container {
@@ -103,7 +104,6 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     background-color: rgba(255, 255, 255,);
 }
 
@@ -249,4 +249,84 @@ footer {
 .mission-block:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-block {
+    grid-column: 1 / 4; /* Prend toute la largeur */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery-block i {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+.gallery-block h2 {
+    color: #004080;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Grille pour les mascottes */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour 6 mascottes */
+    gap: 25px;
+    width: 100%;
+}
+
+/* Style pour chaque élément de la galerie */
+.gallery-item {
+    background-color: transparent; /* Fond transparent comme demandé */
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Style pour les images */
+.gallery-item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Style pour les textes */
+.gallery-item p {
+    color: #004080;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    }
 }
