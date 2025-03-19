@@ -1,0 +1,157 @@
+header {
+    margin-bottom: 40px;
+}
+
+/* Si cela n'est pas suffisant, vous pouvez aussi ajouter */
+.welcome-block, .centered-logo {
+    margin-top: 40px;
+}
+
+.faq-block {
+    margin-top: 100px; /* Grande marge en haut */
+    padding-top: 50px; /* Espace interne supplémentaire */
+}
+
+.support-block {
+    grid-column: 1 / 4;
+    background-color: rgba(230, 242, 255, 0.8);
+    color: #004080;
+}
+
+.support-intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #004080;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b9afd7;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 0 3px rgba(0, 64, 128, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.checkbox-group label {
+    display: inline;
+    font-size: 0.9rem;
+}
+
+.submit-button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit-button:hover {
+    background-color: #002d5a;
+}
+
+.faq-block {
+    grid-column: 1 / 4;
+    background-color: rgba(240, 230, 255, 0.8);
+    color: #004080;
+}
+
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: #004080;
+    font-size: 1.2rem;
+}
+
+.faq-item a {
+    color: #004080;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    color: #b388dd;
+    border-bottom: 2px solid #b388dd;
+    padding-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+    }
+    
+    .submit-button {
+        width: 100%;
+    }
+}
