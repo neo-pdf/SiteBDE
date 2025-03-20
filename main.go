@@ -6,30 +6,71 @@ import (
 	"net/http"
 )
 
-func renderTemplate(w http.ResponseWriter, tmpl string) {
+type HomeData struct {
+	Connecte bool
+}
+
+func renderTemplate(w http.ResponseWriter, tmpl string, data any) {
 	tmpl = "templates/" + tmpl + ".html"
 	t, err := template.ParseFiles(tmpl)
 	if err != nil {
 		http.Error(w, "Erreur lors du chargement de la page", http.StatusInternalServerError)
 		return
 	}
-	t.Execute(w, nil)
+	t.Execute(w, data)
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "site")
+	data := HomeData{
+		Connecte: false,
+	}
+
+	if r.Method == http.MethodPost {
+		data.Connecte = true
+	}
+
+	renderTemplate(w, "site", data)
 }
 
 func postulerHandler(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "postuler")
+	renderTemplate(w, "postuler", nil)
 }
 
 func supportHandler(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "support")
+	renderTemplate(w, "support", nil)
 }
 
 func membresHandler(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "membres")
+	renderTemplate(w, "membres", nil)
+}
+
+func connexionHandler(w http.ResponseWriter, r *http.Request) {
+	data := HomeData{
+		Connecte: false,
+	}
+
+	if r.Method == http.MethodPost {
+		data.Connecte = true
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+		return
+	}
+
+	// Rendu du template pour la page de connexion
+	renderTemplate(w, "connexion", data)
+}
+
+func inscriptionHandler(w http.ResponseWriter, r *http.Request) {
+	data := HomeData{
+		Connecte: false,
+	}
+
+	if r.Method == http.MethodPost {
+		data.Connecte = true
+		http.Redirect(w, r, "/connexion", http.StatusSeeOther)
+		return
+	}
+
+	renderTemplate(w, "inscription", data)
 }
 
 func main() {
@@ -37,9 +78,6 @@ func main() {
 	http.Handle("/templates/", http.StripPrefix("/templates/", http.FileServer(http.Dir("templates"))))
 
 	http.HandleFunc("/", homeHandler)
-	http.HandleFunc("/postuler", postulerHandler)
-	http.HandleFunc("/support", supportHandler)
-	http.HandleFunc("/membres", membresHandler)
 
 	port := ":8080"
 	log.Println("Serveur démarré sur http://localhost" + port)
