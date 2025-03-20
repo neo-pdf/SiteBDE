@@ -1,21 +1,23 @@
 package main
 
 import (
+	/*
 	"database/sql"
+	_ "github.com/glebarez/go-sqlite"
+	"fmt"
+	*/
 	"html/template"
 	"log"
 	"net/http"
-	_ "github.com/glebarez/go-sqlite"
-	"fmt"
 )
-
+/*
 var db *sql.DB
 
 type HomeData struct {
 	Connecte bool
 	Message  string
 }
-
+*/
 func renderTemplate(w http.ResponseWriter, tmpl string, data any) {
 	tmpl = "templates/" + tmpl + ".html"
 	t, err := template.ParseFiles(tmpl)
@@ -28,6 +30,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string, data any) {
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
+	/*
 	data := HomeData{
 		Connecte: false,
 	}
@@ -35,8 +38,8 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		data.Connecte = true
 	}
-
 	renderTemplate(w, "site", data)
+	*/
 }
 
 func postulerHandler(w http.ResponseWriter, r *http.Request) {
@@ -50,7 +53,7 @@ func supportHandler(w http.ResponseWriter, r *http.Request) {
 func membresHandler(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "membres", nil)
 }
-
+/*
 func inscriptionHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		// Récupérer les données du formulaire
@@ -133,10 +136,12 @@ func initDB() {
 
 	fmt.Println("Base de données initialisée avec succès")
 }
-
+*/
 func main() {
+	/*
 	initDB()
 	defer db.Close()
+	*/
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	http.Handle("/templates/", http.StripPrefix("/templates/", http.FileServer(http.Dir("templates"))))
