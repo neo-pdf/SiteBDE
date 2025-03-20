@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - BDE Paris Ynov Campus</title>
     <link rel="stylesheet" href="../static/css/body.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
+    <a href="../templates/site.html" class="back-home-logo">
+        <img src="../static/images/logoblanc.png" alt="Retour à l'accueil" style="width: 40px; height: 40px; object-fit: contain;">
+    </a>
     <div class="login-container">
         <div class="login-header">
             <img src="../static/images/bde.png" alt="Logo BDE Ynov">
             <h1>Inscription</h1>
         </div>
-        
         <form method="POST" action="/inscription">
             <div class="form-group">
                 <label for="username">Identifiant</label>
@@ -36,7 +39,6 @@
             
             <button type="submit" class="login-button">S'inscrire</button>
         </form>
-
         <div class="login-footer">
             <p>Déjà inscrit ? <a href="../templates/connexion.html">Se connecter</a></p>
         </div>

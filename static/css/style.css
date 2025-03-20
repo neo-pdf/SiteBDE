@@ -54,11 +54,53 @@ nav a {
 }
 
 .login-button {
-    background-color: #004080d1;
+    background: linear-gradient(to right, #6a11cb, #8a4fff);
     color: white;
-    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
     text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(106, 17, 203, 0.2);
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background: linear-gradient(to right, #5a10bb, #7a3fff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(106, 17, 203, 0.3);
+}
+
+
+/* Style du logo de retour à l'accueil */
+.back-home-logo {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    overflow: hidden; /* Assure que l'image est contenue dans le cercle */
+}
+
+.back-home-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; /* Garde les proportions de l'image */
+    border-radius: 50%; /* Optionnel : rend l'image elle-même circulaire */
+}
+
+.back-home-logo:hover {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .page-layout {

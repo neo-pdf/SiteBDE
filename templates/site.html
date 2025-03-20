@@ -12,27 +12,15 @@
         <div class="navbar">
             <nav>
                 <ul>
-                    {{if .Connecte}}
-                        <li><a href="../templates/postuler.html">Postuler</a></li>
-                        <li><a href="../templates/calendrier.html">Calendrier</a></li>
-                        <li><a href="../templates/support.html">Support</a></li>
-                        <li><a href="../templates/membres.html">Membres</a></li>
-                        <li><a href="https://www.ynov.com/campus/paris">Campus</a></li>
-                    {{else}}
-                        <li><a href="../templates/connexion.html">Postuler</a></li>
-                        <li><a href="../templates/connexion.html">Calendrier</a></li>
-                        <li><a href="../templates/connexion.html">Support</a></li>
-                        <li><a href="../templates/connexion.html">Membres</a></li>
-                        <li><a href="https://www.ynov.com/campus/paris">Campus</a></li>
-                    {{end}}
+                    <li><a href="../templates/postuler.html">Postuler</a></li>
+                    <li><a href="../templates/calendrier.html">Calendrier</a></li>
+                    <li><a href="../templates/support.html">Support</a></li>
+                    <li><a href="../templates/membres.html">Membres</a></li>
+                    <li><a href="https://www.ynov.com/campus/paris">Campus</a></li>
                 </ul>
             </nav>
             <div class="login-container">
-                {{if .Connecte}}
-                    <a class="login-button">Connecté !</a>
-                {{else}}
-                    <a href="../templates/connexion.html" class="login-button">Se connecter</a>
-                {{end}}
+                <a href="../templates/connexion.html" class="login-button">Se connecter</a>
             </div>
         </div>
     </header>
@@ -44,36 +32,19 @@
         </div>
 
         <div class="block mission-block">
-            {{if .Connecte}}
-                <a href="../templates/calendrier.html" style="text-decoration: none; color: inherit; display: block;">
-                    <i class="fas fa-star"></i>
-                    <h2>Notre mission</h2>
-                    <p>Le BDE de Paris Ynov Campus est au cœur de la vie du campus. Notre mission est simple mais essentielle : rendre vos années d'études inoubliables en créant des moments de partage, de découverte et de festivité.</p>
-                </a>
-            {{else}}
-                <a href="../templates/connexion.html" style="text-decoration: none; color: inherit; display: block;">
-                    <i class="fas fa-star"></i>
-                    <h2>Notre mission</h2>
-                    <p>Le BDE de Paris Ynov Campus est au cœur de la vie du campus. Notre mission est simple mais essentielle : rendre vos années d'études inoubliables en créant des moments de partage, de découverte et de festivité.</p>
-                </a>
-            {{end}}
+            <a href="../templates/calendrier.html" style="text-decoration: none; color: inherit; display: block;">
+                <i class="fas fa-star"></i>
+                <h2>Notre mission</h2>
+                <p>Le BDE de Paris Ynov Campus est au cœur de la vie du campus. Notre mission est simple mais essentielle : rendre vos années d'études inoubliables en créant des moments de partage, de découverte et de festivité.</p>
+            </a>
         </div>
 
         <div class="block who-block">
-            {{if .Connecte}}
-                <a href="../templates/membres.html" style="text-decoration: none; color: inherit; display: block;">
-                    <i class="fas fa-users"></i>
-                    <h2>Qui sommes-nous ?</h2>
-                    <p>Nous sommes une équipe dynamique d'étudiants passionnés, élus par nos pairs pour animer la vie étudiante. Animés par une énergie sans limite et un amour des soirées mémorables.</p>
-                </a>
-            {{else}}
-                <a href="../templates/connexion.html" style="text-decoration: none; color: inherit; display: block;">
-                    <i class="fas fa-users"></i>
-                    <h2>Qui sommes-nous ?</h2>
-                    <p>Nous sommes une équipe dynamique d'étudiants passionnés, élus par nos pairs pour animer la vie étudiante. Animés par une énergie sans limite et un amour des soirées mémorables.</p>
-                </a>
-            {{end}}
-            
+            <a href="../templates/membres.html" style="text-decoration: none; color: inherit; display: block;">
+                <i class="fas fa-users"></i>
+                <h2>Qui sommes-nous ?</h2>
+                <p>Nous sommes une équipe dynamique d'étudiants passionnés, élus par nos pairs pour animer la vie étudiante. Animés par une énergie sans limite et un amour des soirées mémorables.</p>
+            </a>
         </div>
 
         <div class="block activities-block">

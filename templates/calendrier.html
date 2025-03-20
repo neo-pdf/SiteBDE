@@ -7,9 +7,33 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/calendrier.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        function registerForEvent(eventName) {
+            // URL de paiement Stripe génériques
+            const eventPaymentUrls = {
+                'Afterwork de Printemps': 'https://stripe.com/fr?ad_content=737161626383&gad_source=1&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxVmFTGj5atg76L8qjmY6rVFu1cNOhSS-295R7QrAJx1IeeUjYgciLYaArWXEALw_wcB&utm_adposition=&utm_campaign=EMEA_FR_fr_Google_Search_Brand_Stripe_EXA-922532853&utm_device=c&utm_matchtype=e&utm_medium=cpc&utm_source=google&utm_term=stripe',
+                'Soirée Carnaval !': 'https://www.helloasso.com/associations/bde-paris-ynov-campus/evenements/soiree-carnaval',
+                'Soirée Fluo': 'https://stripe.com/fr?ad_content=737161626383&gad_source=1&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxVmFTGj5atg76L8qjmY6rVFu1cNOhSS-295R7QrAJx1IeeUjYgciLYaArWXEALw_wcB&utm_adposition=&utm_campaign=EMEA_FR_fr_Google_Search_Brand_Stripe_EXA-922532853&utm_device=c&utm_matchtype=e&utm_medium=cpc&utm_source=google&utm_term=stripe',
+                'Afterwork Jeux de Société': 'https://stripe.com/fr?ad_content=737161626383&gad_source=1&gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxVmFTGj5atg76L8qjmY6rVFu1cNOhSS-295R7QrAJx1IeeUjYgciLYaArWXEALw_wcB&utm_adposition=&utm_campaign=EMEA_FR_fr_Google_Search_Brand_Stripe_EXA-922532853&utm_device=c&utm_matchtype=e&utm_medium=cpc&utm_source=google&utm_term=stripe'
+            };
+    
+            // Récupérer l'URL de paiement pour l'événement
+            const paymentUrl = eventPaymentUrls[eventName];
+    
+            if (paymentUrl) {
+                // Redirection vers la page de paiement Stripe
+                window.location.href = paymentUrl;
+            } else {
+                alert('Événement non trouvé');
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
+        <a href="../templates/site.html" class="back-home-logo">
+            <img src="../static/images/BDE-main_logo.png" alt="Retour à l'accueil" style="width: 40px; height: 40px; object-fit: contain;">
+        </a>
         <div class="navbar">
             <nav>
                 <ul>
@@ -21,7 +45,7 @@
                 </ul>
             </nav>
             <div class="login-container">
-                <a href="/html/connexion.html" class="login-button">Se connecter</a>
+                <a href="/templates/connexion.html" class="login-button">Se connecter</a>
             </div>
         </div>
     </header>
@@ -52,7 +76,7 @@
                             <p class="event-description">Viens célébrer l'arrivée du printemps avec boissons, musique et bonne ambiance !</p>
                             <div class="event-footer">
                                 <span class="event-price"><i class="fas fa-ticket-alt"></i> Gratuit pour les adhérents</span>
-                                <a href="/html/connexion.html" class="register-btn">Je participe</a>
+                                <button onclick="registerForEvent('Afterwork de Printemps')" class="register-btn">Je participe</button>
                             </div>
                         </div>
                     </div>
@@ -69,7 +93,7 @@
                             <p class="event-description">Découverte guidée des installations numériques interactives et des œuvres d'art digital.</p>
                             <div class="event-footer">
                                 <span class="event-price"><i class="fas fa-ticket-alt"></i> 5€ (adhérents) / 7€ (non-adhérents)</span>
-                                <a href="/html/connexion.html" class="register-btn">Réserver</a>
+                                <button onclick="registerForEvent('Soirée Carnaval !')" class="register-btn">Réserver</button>
                             </div>
                         </div>
                     </div>
@@ -93,7 +117,7 @@
                             <p class="event-description">LA soirée à ne pas manquer ! Dress-code : tenue fluo. DJ set exceptionnel, animations et surprises toute la nuit.</p>
                             <div class="event-footer">
                                 <span class="event-price"><i class="fas fa-ticket-alt"></i> 10€ (prévente) / 15€ (sur place)</span>
-                                <a href="/html/connexion.html" class="register-btn highlight">Acheter ma place</a>
+                                <button onclick="registerForEvent('Soirée Fluo')" class="register-btn highlight">Acheter ma place</button>
                             </div>
                         </div>
                     </div>
@@ -110,7 +134,7 @@
                             <p class="event-description">Une soirée détente autour de jeux de société variés. Snacks et boissons offerts par le BDE.</p>
                             <div class="event-footer">
                                 <span class="event-price"><i class="fas fa-ticket-alt"></i> Gratuit</span>
-                                <a href="/html/connexion.html" class="register-btn">Je participe</a>
+                                <button onclick="registerForEvent('Afterwork Jeux de Société')" class="register-btn">Je participe</button>
                             </div>
                         </div>
                     </div>
@@ -118,6 +142,7 @@
             </div>
         </div>
         
+        <!-- Reste du code HTML identique à la version précédente -->
         <div class="block past-events-block">
             <h3><i class="fas fa-history"></i> Événements passés</h3>
             <p>Tu as raté un événement ? Retrouve les photos et les moments forts de nos derniers événements sur notre <a href="https://www.instagram.com/ynovparisbde/" target="_blank">Instagram</a>.</p>
@@ -138,6 +163,7 @@
             </div>
         </div>
         
+        <!-- Bloc de rappel de connexion -->
         <div class="block login-reminder-block">
             <i class="fas fa-user-lock"></i>
             <h3>Connecte-toi pour participer à nos événements</h3>
