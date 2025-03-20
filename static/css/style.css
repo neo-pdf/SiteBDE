@@ -97,19 +97,19 @@ nav a {
 .logo-container {
     position: absolute;
     top: 50%;
-    right: 50px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255,);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .logo-container img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
 }
 

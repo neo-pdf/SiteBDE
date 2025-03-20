@@ -1,2 +1,171 @@
 <!DOCTYPE html>
-calendrier
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier - BDE Paris Ynov Campus</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/calendrier.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="/templates/postuler.html">Postuler</a></li>
+                    <li><a href="#" class="active">Calendrier</a></li>
+                    <li><a href="/templates/support.html">Support</a></li>
+                    <li><a href="/templates/membres.html">Membres</a></li>
+                    <li><a href="https://www.ynov.com/campus/paris">Campus</a></li>
+                </ul>
+            </nav>
+            <div class="login-container">
+                <a href="/html/connexion.html" class="login-button">Se connecter</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <div class="block calendar-intro-block">
+            <i class="fas fa-calendar-alt"></i>
+            <h2>Ton BDE toute l'année</h2>
+            <p class="calendar-intro">Découvre tous les événements organisés par le BDE Paris Ynov Campus pour l'année 2024-2025. Afterworks, soirées à thème, activités culturelles, tournois sportifs... Il y en a pour tous les goûts !</p>
+        </div>
+
+        <div class="block events-block">
+            <div class="events-timeline">
+                <div class="month-section">
+                    <div class="month-header">
+                        <h3>Mars 2025</h3>
+                    </div>
+                    
+                    <div class="event-card" data-category="afterwork">
+                        <div class="event-date">
+                            <span class="day">20</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Afterwork de Printemps</h4>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Campus Ynov Paris - Espace Lounge</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 18h00 - 22h00</p>
+                            <p class="event-description">Viens célébrer l'arrivée du printemps avec boissons, musique et bonne ambiance !</p>
+                            <div class="event-footer">
+                                <span class="event-price"><i class="fas fa-ticket-alt"></i> Gratuit pour les adhérents</span>
+                                <a href="/html/connexion.html" class="register-btn">Je participe</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card" data-category="culture">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Soirée Carnaval !</h4>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i>Bistrot Jad - Paris 75002</p>
+                            <p class="event-time"><i class="far fa-clock"></i>21h - 5h</p>
+                            <p class="event-description">Découverte guidée des installations numériques interactives et des œuvres d'art digital.</p>
+                            <div class="event-footer">
+                                <span class="event-price"><i class="fas fa-ticket-alt"></i> 5€ (adhérents) / 7€ (non-adhérents)</span>
+                                <a href="/html/connexion.html" class="register-btn">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Avril 2025 -->
+                <div class="month-section">
+                    <div class="month-header">
+                        <h3>Avril 2025</h3>
+                    </div>
+                    
+                    <div class="event-card" data-category="soiree">
+                        <div class="event-date">
+                            <span class="day">18</span>
+                            <span class="month">Avr</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Soirée Fluo</h4>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Le Duplex - Paris 16e</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 23h00 - 05h00</p>
+                            <p class="event-description">LA soirée à ne pas manquer ! Dress-code : tenue fluo. DJ set exceptionnel, animations et surprises toute la nuit.</p>
+                            <div class="event-footer">
+                                <span class="event-price"><i class="fas fa-ticket-alt"></i> 10€ (prévente) / 15€ (sur place)</span>
+                                <a href="/html/connexion.html" class="register-btn highlight">Acheter ma place</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card" data-category="afterwork">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">Avr</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Afterwork Jeux de Société</h4>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Campus Ynov Paris - Cafétéria</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 18h00 - 22h00</p>
+                            <p class="event-description">Une soirée détente autour de jeux de société variés. Snacks et boissons offerts par le BDE.</p>
+                            <div class="event-footer">
+                                <span class="event-price"><i class="fas fa-ticket-alt"></i> Gratuit</span>
+                                <a href="/html/connexion.html" class="register-btn">Je participe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="block past-events-block">
+            <h3><i class="fas fa-history"></i> Événements passés</h3>
+            <p>Tu as raté un événement ? Retrouve les photos et les moments forts de nos derniers événements sur notre <a href="https://www.instagram.com/ynovparisbde/" target="_blank">Instagram</a>.</p>
+            
+            <div class="past-events-gallery">
+                <div class="past-event">
+                    <img src="../static/images/carnaval.png" alt="Carnaval 2025">
+                    <span>Carnaval 2025</span>
+                </div>
+                <div class="past-event">
+                    <img src="../static/images/stvalentin.png" alt="Saint-Valentin 2025">
+                    <span>Saint-Valentin 2025</span>
+                </div>
+                <div class="past-event">
+                    <img src="../static/images/noel.png" alt="Soirée d'hiver">
+                    <span>Noël 2024</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="block login-reminder-block">
+            <i class="fas fa-user-lock"></i>
+            <h3>Connecte-toi pour participer à nos événements</h3>
+            <p>Crée ton compte ou connecte-toi pour réserver tes places aux événements et profiter des tarifs préférentiels réservés aux adhérents du BDE.</p>
+            <div class="login-reminder-buttons">
+                <a href="/html/connexion.html" class="login-btn">Se connecter</a>
+                <a href="/html/inscription.html" class="register-account-btn">Créer un compte</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="contact-section">
+            <div class="contact-info">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> bdepyc92@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Campus Ynov Paris</p>
+            </div>
+            <div class="social-links">
+                <h4>Suivez-nous</h4>
+                <a href="https://www.instagram.com/ynovparisbde/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BDE Paris Ynov Campus - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
