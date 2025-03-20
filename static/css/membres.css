@@ -1,0 +1,273 @@
+.page-layout {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Style du bloc d'introduction */
+.team-intro-block {
+    grid-column: 1 / 7; /* Prend toute la largeur (6 colonnes) */
+    background-color: rgba(230, 242, 255, 0.8);
+    color: #004080;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.team-intro-block i {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+.team-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1.05em;
+}
+
+/* Styles spécifiques pour chaque type de pôle */
+.team-pole-block {
+    background-color: rgba(249, 249, 249, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Pôles à 4 membres (en haut) */
+.pole-large {
+    grid-column: span 3; /* Prend 3 colonnes sur 6 */
+}
+
+/* Pôle à 3 membres (au milieu, pleine largeur) */
+.pole-full-width {
+    grid-column: 1 / 7; /* Prend les 6 colonnes */
+}
+
+/* Pôles à 1 membre (en bas) */
+.pole-small {
+    grid-column: span 2; /* Prend 2 colonnes sur 6 */
+}
+
+/* En-tête du pôle avec mascotte */
+.pole-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 64, 128, 0.2);
+}
+
+.pole-mascot {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.pole-header h3 {
+    color: #004080;
+    font-size: 1.4em;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.pole-description {
+    color: #004080;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+/* Grilles de membres selon le type de pôle */
+.members-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.pole-large .members-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 membres par ligne pour pôles à 4 membres */
+}
+
+.pole-full-width .members-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 membres par ligne pour pôle pleine largeur */
+}
+
+.pole-small .members-grid {
+    grid-template-columns: 1fr; /* 1 seul membre pour les petits pôles */
+}
+
+/* Style de la carte de membre */
+.member-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Pour les pôles avec un seul membre */
+.single-member {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+/* Photo de profil */
+.member-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 3px solid #b9afd7;
+}
+
+.pole-small .member-photo {
+    width: 100px;
+    height: 100px;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Infos du membre */
+.member-card h4 {
+    color: #004080;
+    margin: 6px 0 3px;
+    font-size: 1.05em;
+}
+
+.member-role {
+    color: #b388dd;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+/* Bloc pour rejoindre l'équipe */
+.team-join-block {
+    grid-column: 1 / 7; /* Prend toute la largeur */
+    background-color: rgba(240, 230, 255, 0.8);
+    color: #004080;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.team-join-block i {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+.team-join-block p {
+    max-width: 600px;
+    margin: 15px auto;
+    font-size: 1.05em;
+}
+
+.join-button {
+    display: inline-block;
+    background-color: #004080;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #002d5a;
+}
+
+/* Style pour le lien actif dans la barre de navigation */
+nav a.active {
+    color: #b388dd;
+    border-bottom: 2px solid #b388dd;
+    padding-bottom: 3px;
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+    .page-layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .team-intro-block, .pole-full-width, .team-join-block {
+        grid-column: 1 / 5;
+    }
+    
+    .pole-large {
+        grid-column: span 2;
+    }
+    
+    .pole-small {
+        grid-column: span 2;
+    }
+    
+    .pole-full-width .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-layout {
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+    }
+    
+    .team-intro-block, .pole-full-width, .team-join-block {
+        grid-column: 1 / 3;
+    }
+    
+    .pole-large, .pole-small {
+        grid-column: 1 / 3;
+    }
+    
+    .pole-full-width .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-intro-block, .pole-large, .pole-full-width, .pole-small, .team-join-block {
+        grid-column: 1;
+    }
+    
+    .pole-large .members-grid,
+    .pole-full-width .members-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-card {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}

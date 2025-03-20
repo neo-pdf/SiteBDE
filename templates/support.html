@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - BDE Paris Ynov Campus</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/support.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="../templates/postuler.html">Postuler</a></li>
+                    <li><a href="../templates/calendrier.html">Calendrier</a></li>
+                    <li><a href="../templates/membres.html">Membres</a></li>
+                    <li><a href="https://www.ynov.com/campus/paris">Campus</a></li>
+                </ul>
+            </nav>
+            <div class="login-container">
+                <a href="/templates/connexion.html" class="login-button">Se connecter</a>
+            </div>
+        </div>
+    </header>
+
+        <div class="block support-block">
+            <i class="fas fa-headset"></i>
+            <h2>Support</h2>
+            <p class="support-intro">Vous avez une question, une idée ou une suggestion pour le BDE ? Contactez-nous via ce formulaire et nous vous répondrons dans les plus brefs délais.</p>
+            
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Choisissez un sujet</option>
+                        <option value="question">Question générale</option>
+                        <option value="idea">Proposition d'idée</option>
+                        <option value="event">Question sur un événement</option>
+                        <option value="partnership">Proposition de partenariat</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">J'accepte que mes données soient utilisées pour traiter ma demande</label>
+                </div>
+                
+                <button type="submit" class="submit-button">Envoyer</button>
+            </form>
+        </div>
+
+        <div class="block faq-block">
+            <i class="fas fa-question-circle"></i>
+            <h2>Questions fréquentes</h2>
+            
+            <div class="faq-item">
+                <h3>Comment rejoindre le BDE ?</h3>
+                <p>Pour rejoindre le BDE, rendez-vous sur la page <a href="/templates/postuler.html">Postuler</a> et remplissez le formulaire de candidature.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Comment participer aux événements du BDE ?</h3>
+                <p>Tous les événements sont annoncés sur notre <a href="/templates/calendrier.html">Calendrier</a> et sur notre compte Instagram. L'inscription se fait généralement via un formulaire en ligne.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Je souhaite proposer un partenariat, comment procéder ?</h3>
+                <p>Utilisez notre formulaire de contact et sélectionnez "Proposition de partenariat" dans le menu déroulant. Notre pôle partenariat vous contactera rapidement.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="contact-section">
+            <div class="contact-info">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> bdepyc92@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Campus Ynov Paris</p>
+            </div>
+            <div class="social-links">
+                <h4>Suivez-nous</h4>
+                <a href="https://www.instagram.com/ynovparisbde/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BDE Paris Ynov Campus - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
