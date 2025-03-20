@@ -1,15 +1,19 @@
 # SiteBDE
 
+Groupe 9 : Néo, Berkan, Pierre
+
 Le nouveau site du Bureau des Étudiants de Paris Ynov Campus !
 
 Conçus pour faciliter la communication avec les étudiants et pour centraliser l'ensemble des informations du BDE.
 
-### Lancement du code
+## Lancement du code
+
 Faire la commande ``go run main.go``
 
 Accès au site localement grace au lien [localhost://8080](localhost://8080)
 
 ## Pages du site
+
 ``site.html``: Page d'accueil avec accès à toutes les autres pages (seulement si connecté).
 
 ``connexion.html``: Page permettant de se connecter à son compte et avoir accès à l'ensemble des pages.
@@ -33,12 +37,12 @@ Accès au site localement grace au lien [localhost://8080](localhost://8080)
 ### Backend
 
 #### Golang
-    
+
 Récupération de la base de données avec les bibliothèques ``https://github.com/glebarez/sqlite`` et ``database/sql``
-    
-Créer 
-    
-# Frontend
+
+Créer
+
+#### Frontend
 
 HTML
 
@@ -51,6 +55,3 @@ Néo Silvertand: Chef de projet
 Tekten Berkan: Frontend
 
 Ly Norith Pierre: Backend
-
-
-
